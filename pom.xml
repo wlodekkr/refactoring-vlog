@@ -17,10 +17,10 @@
     </parent>
 
     <modules>
-        <module>Procedural-vs-Object-Oriented</module>
-        <module>Tests-Refactoring</module>
-        <module>Tutor-Procedural-vs-Object-Oriented</module>
-        <module>Tutor-Tests-Refactoring</module>
+        <module>Dirty-Code-01-Procedural-vs-Object-Oriented</module>
+        <module>Dirty-Code-02-Tests-Refactoring</module>
+        <module>Clean-Code-01-Procedural-vs-Object-Oriented</module>
+        <module>Clean-Code-02-Tests-Refactoring</module>
     </modules>
 
     <dependencies>

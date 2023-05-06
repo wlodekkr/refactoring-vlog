@@ -101,9 +101,7 @@ gradle-app.setting
 # JDT-specific (Eclipse Java Development Tools)
 
 # End of https://www.toptal.com/developers/gitignore/api/maven,gradle,java,kotlin,groovy
-/Procedural-vs-Object-Oriented/target/
-/Conditional-Into-Polymorphism/target/
-/Procedural-vs-Object-Oriented/target/
-/Tests-Refactoring/target/
-/Tutor-Procedural-vs-Object-Oriented/src/
-/Tutor-Tests-Refactoring/src/
+/Clean-Code-01-Procedural-vs-Object-Oriented/target/
+/Clean-Code-01-Procedural-vs-Object-Oriented/src/
+/Dirty-Code-01-Procedural-vs-Object-Oriented/target/
+/Dirty-Code-02-Tests-Refactoring/src/

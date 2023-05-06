@@ -10,8 +10,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>pl.refactoring</groupId>
-    <artifactId>Tutor-Tests-Refactoring</artifactId>
+    <artifactId>Clean-Code-01-Procedural-vs-Object-Oriented</artifactId>
     <version>1.0-SNAPSHOT</version>
 
 </project>

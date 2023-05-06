@@ -9,7 +9,7 @@
     <artifactId>pl-refactoring-vlog</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>Tests-Refactoring</artifactId>
+  <artifactId>Dirty-Code-02-Tests-Refactoring</artifactId>
   <packaging>jar</packaging>
 
   <name>Tests-Refactoring</name>
