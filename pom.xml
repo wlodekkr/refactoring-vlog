@@ -17,10 +17,11 @@
     </parent>
 
     <modules>
-        <module>Dirty-Code-01-Procedural-vs-Object-Oriented</module>
-        <module>Dirty-Code-02-Tests-Refactoring</module>
-        <module>Clean-Code-01-Procedural-vs-Object-Oriented</module>
-        <module>Clean-Code-02-Tests-Refactoring</module>
+        <module>VLog-01-ToDo-Procedural-vs-Object-Oriented</module>
+        <module>VLog-01-Done-Procedural-vs-Object-Oriented</module>
+        <module>VLog-02-ToDo-Clean-Tests</module>
+        <module>VLog-02-Done-Clean-Tests</module>
+        <module>VLog-03-ToDo-Consitionals-vs-Polymorphism</module>
     </modules>
 
     <dependencies>
