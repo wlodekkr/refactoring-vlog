@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>pl.refactoring</groupId>
-    <artifactId>VLog-03-ToDo-Conditionals-vs-Polymorphism</artifactId>
+    <artifactId>VLog-03-Begin-Conditionals-vs-Polymorphism</artifactId>
     <version>1.0-SNAPSHOT</version>
 
 </project>

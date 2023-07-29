@@ -9,7 +9,7 @@
     <artifactId>pl-refactoring-vlog</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>VLog-02-ToDo-Clean-Tests</artifactId>
+  <artifactId>VLog-02-Begin-Clean-Tests</artifactId>
   <packaging>jar</packaging>
 
   <name>Tests-Refactoring</name>

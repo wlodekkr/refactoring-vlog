@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>pl.refactoring</groupId>
-    <artifactId>VLog-02-Done-Clean-Tests</artifactId>
+    <artifactId>VLog-02-End-Clean-Tests</artifactId>
     <version>1.0-SNAPSHOT</version>
 
 </project>

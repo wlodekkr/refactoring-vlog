@@ -10,7 +10,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>VLog-01-Done-Procedural-vs-Object-Oriented</artifactId>
+    <artifactId>VLog-01-End-Procedural-vs-Object-Oriented</artifactId>
     <version>1.0-SNAPSHOT</version>
 
 </project>
