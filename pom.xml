@@ -21,7 +21,7 @@
         <module>VLog-01-Done-Procedural-vs-Object-Oriented</module>
         <module>VLog-02-ToDo-Clean-Tests</module>
         <module>VLog-02-Done-Clean-Tests</module>
-        <module>VLog-03-ToDo-Consitionals-vs-Polymorphism</module>
+        <module>VLog-03-ToDo-Conditionals-vs-Polymorphism</module>
     </modules>
 
     <dependencies>
@@ -69,7 +69,7 @@
     </dependencies>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
     </properties>
 
