@@ -5,7 +5,7 @@ import pl.refactoring.vlog02.todo.pricing.SteamBathPricing;
 import pl.refactoring.vlog02.todo.pricing.SwimmingPoolPricing;
 
 /**
- * Sources provided under freeware licence
+ * Sources provided under artistic license
  * Wlodek Krakowski - www.refactoring.pl
  */
 public class Facility {

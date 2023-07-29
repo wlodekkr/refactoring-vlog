@@ -3,7 +3,7 @@ package pl.refactoring.vlog02.done;
 import pl.refactoring.vlog02.done.fees.EntryPeriodFeeCalculator;
 
 /**
- * Sources provided under freeware licence
+ * Sources provided under artistic license
  * Wlodek Krakowski - www.refactoring.pl
  */
 public abstract class Pricing {

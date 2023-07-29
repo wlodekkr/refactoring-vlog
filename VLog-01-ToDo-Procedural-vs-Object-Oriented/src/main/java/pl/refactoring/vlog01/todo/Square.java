@@ -1,7 +1,7 @@
 package pl.refactoring.vlog01.todo;
 
 /**
- * Sources provided under freeware licence
+ * Sources provided under artistic license
  * Wlodek Krakowski - www.refactoring.pl
  */
 public class Square {

@@ -3,7 +3,7 @@ package pl.refactoring.vlog02.done;
 import org.junit.jupiter.api.Test;
 
 /**
- * Sources provided under freeware licence
+ * Sources provided under artistic license
  * Wlodek Krakowski - www.refactoring.pl
  */
 public class SteamBathVisitTest {

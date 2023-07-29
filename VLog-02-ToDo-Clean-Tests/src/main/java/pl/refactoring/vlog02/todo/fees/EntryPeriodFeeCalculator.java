@@ -3,7 +3,7 @@ package pl.refactoring.vlog02.todo.fees;
 import pl.refactoring.vlog02.todo.FeeCalculator;
 
 /**
- * Sources provided under freeware licence
+ * Sources provided under artistic license
  * Wlodek Krakowski - www.refactoring.pl
  */
 public class EntryPeriodFeeCalculator implements FeeCalculator {

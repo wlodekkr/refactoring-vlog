@@ -5,7 +5,7 @@ import pl.refactoring.vlog02.done.fees.EntryPeriodFeeCalculator;
 import pl.refactoring.vlog02.done.points.HourlyPointsCalculator;
 
 /**
- * Sources provided under freeware licence
+ * Sources provided under artistic license
  * Wlodek Krakowski - www.refactoring.pl
  */
 public class SteamBathPricing extends Pricing {

@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.xmlunit.assertj3.XmlAssert;
 
 /**
- * Sources provided under freeware licence
+ * Sources provided under artistic license
  * Wlodek Krakowski - www.refactoring.pl
  */
 public class GymVisitTest {
