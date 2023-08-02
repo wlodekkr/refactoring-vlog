@@ -1,4 +1,4 @@
-package pl.refactoring.dirty.strategies;
+package pl.refactoring.vlog03.todo;
 
 public enum CooperationType {
     //

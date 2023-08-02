@@ -1,12 +1,9 @@
-package pl.refactoring.dirty.strategies;
+package pl.refactoring.vlog03.todo;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 
 import java.time.Instant;
-
-import static pl.refactoring.dirty.strategies.PersonAssertion.assertPerson;
-import static pl.refactoring.dirty.strategies.TestConstants.*;
 
 public class WorkDurationTest {
     @ParameterizedTest
@@ -14,12 +11,12 @@ public class WorkDurationTest {
     public void monday_8Hours_Morning(CooperationType type){
         Person person = new Person(1, "Adam", "Smith", type, NightTimeRegulation.NIGHT_SHIFT_23_7, 8);
 
-        Instant begin = instantOf(MON, 7, 0);
-        Instant end = instantOf(MON, 15, 0);
+        Instant begin = TestConstants.instantOf(TestConstants.MON, 7, 0);
+        Instant end = TestConstants.instantOf(TestConstants.MON, 15, 0);
 
         person.registerTime(begin, end);
 
-        assertPerson(person)
+        PersonAssertion.assertPerson(person)
                 .hasAllHours(8)
                 .hasAllMinutes(8 * 60);
     }
@@ -29,12 +26,12 @@ public class WorkDurationTest {
     public void monday_8Hours_Night(){
         Person person = new Person(1, "Adam", "Smith", CooperationType.EMPLOYEE, NightTimeRegulation.NIGHT_SHIFT_23_7, 8);
 
-        Instant begin = instantOf(MON, 23, 0);
-        Instant end = instantOf(TUE, 7, 0);
+        Instant begin = TestConstants.instantOf(TestConstants.MON, 23, 0);
+        Instant end = TestConstants.instantOf(TestConstants.TUE, 7, 0);
 
         person.registerTime(begin, end);
 
-        assertPerson(person)
+        PersonAssertion.assertPerson(person)
                 .hasAllHours(8)
                 .hasAllMinutes(8 * 60);
     }
@@ -44,12 +41,12 @@ public class WorkDurationTest {
     public void monday_8Hours_Half_Afternoon_And_Night(){
         Person person = new Person(1, "Adam", "Smith", CooperationType.EMPLOYEE, NightTimeRegulation.NIGHT_SHIFT_23_7, 8);
 
-        Instant begin = instantOf(MON, 15, 0);
-        Instant end = instantOf(MON, 23, 0);
+        Instant begin = TestConstants.instantOf(TestConstants.MON, 15, 0);
+        Instant end = TestConstants.instantOf(TestConstants.MON, 23, 0);
 
         person.registerTime(begin, end);
 
-        assertPerson(person)
+        PersonAssertion.assertPerson(person)
                 .hasAllHours(8)
                 .hasAllMinutes(8 * 60);
     }

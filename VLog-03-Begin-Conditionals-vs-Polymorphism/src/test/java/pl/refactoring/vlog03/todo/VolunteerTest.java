@@ -1,12 +1,8 @@
-package pl.refactoring.dirty.strategies;
+package pl.refactoring.vlog03.todo;
 
 import org.junit.jupiter.api.Test;
 
 import java.time.Instant;
-
-import static pl.refactoring.dirty.strategies.PersonAssertion.assertPerson;
-import static pl.refactoring.dirty.strategies.TestConstants.*;
-import static pl.refactoring.dirty.strategies.TestConstants.THU;
 
 public class VolunteerTest {
     /**
@@ -17,12 +13,12 @@ public class VolunteerTest {
     public void noBaseSalary(){
         Person person = new Person(1, "Vadym", "Volunteer", CooperationType.VOLUNTEER, NightTimeRegulation.NIGHT_SHIFT_22_6, 8);
 
-        Instant begin = instantOf(MON, 7, 0);
-        Instant end = instantOf(MON, 15, 0);
+        Instant begin = TestConstants.instantOf(TestConstants.MON, 7, 0);
+        Instant end = TestConstants.instantOf(TestConstants.MON, 15, 0);
 
         person.registerTime(begin, end);
 
-        assertPerson(person)
+        PersonAssertion.assertPerson(person)
                 .hasBaseSalary(0);
     }
 
@@ -30,12 +26,12 @@ public class VolunteerTest {
     public void noNighttimeSupplement(){
         Person person = new Person(1, "Vadym", "Volunteer", CooperationType.VOLUNTEER, NightTimeRegulation.NIGHT_SHIFT_22_6, 8);
 
-        Instant begin = instantOf(WED, 22, 0);
-        Instant end = instantOf(THU, 6, 0);
+        Instant begin = TestConstants.instantOf(TestConstants.WED, 22, 0);
+        Instant end = TestConstants.instantOf(TestConstants.THU, 6, 0);
 
         person.registerTime(begin, end);
 
-        assertPerson(person)
+        PersonAssertion.assertPerson(person)
                 .hasNighttimeSupplement(0);
     }
 
@@ -43,12 +39,12 @@ public class VolunteerTest {
     public void bonusCoins(){
         Person person = new Person(1, "Vadym", "Volunteer", CooperationType.VOLUNTEER, NightTimeRegulation.NIGHT_SHIFT_22_6, 8);
 
-        Instant begin = instantOf(WED, 22, 0);
-        Instant end = instantOf(THU, 6, 0);
+        Instant begin = TestConstants.instantOf(TestConstants.WED, 22, 0);
+        Instant end = TestConstants.instantOf(TestConstants.THU, 6, 0);
 
         person.registerTime(begin, end);
 
-        assertPerson(person)
+        PersonAssertion.assertPerson(person)
                 .hasBonusCoins(8 * 3);
     }
 }

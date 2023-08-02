@@ -1,8 +1,7 @@
-package pl.refactoring.dirty.strategies;
+package pl.refactoring.vlog03.todo;
 
 import java.time.Duration;
 import java.time.Instant;
-import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.List;
 

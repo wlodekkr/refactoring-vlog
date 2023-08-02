@@ -1,4 +1,4 @@
-package pl.refactoring.dirty.strategies;
+package pl.refactoring.vlog03.todo;
 
 import org.assertj.core.api.AbstractAssert;
 import org.assertj.core.util.Objects;

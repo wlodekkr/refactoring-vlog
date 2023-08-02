@@ -1,12 +1,8 @@
-package pl.refactoring.dirty.strategies;
+package pl.refactoring.vlog03.todo;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.time.Instant;
-
-import static pl.refactoring.dirty.strategies.PersonAssertion.assertPerson;
-import static pl.refactoring.dirty.strategies.TestConstants.*;
 
 public class EmployeeTest {
 
@@ -20,12 +16,12 @@ public class EmployeeTest {
     public void baseSalaryFor1Hour(){
         Person person = new Person(1, "Adam", "Employee", CooperationType.EMPLOYEE, NightTimeRegulation.NIGHT_SHIFT_22_6, 8);
 
-        Instant begin = instantOf(MON, 7, 0);
-        Instant end = instantOf(MON, 8, 0);
+        Instant begin = TestConstants.instantOf(TestConstants.MON, 7, 0);
+        Instant end = TestConstants.instantOf(TestConstants.MON, 8, 0);
 
         person.registerTime(begin, end);
 
-        assertPerson(person)
+        PersonAssertion.assertPerson(person)
                 .hasBaseSalary(10);
     }
 
@@ -33,12 +29,12 @@ public class EmployeeTest {
     public void baseSalaryFor8Hours(){
         Person person = new Person(1, "Adam", "Employee", CooperationType.EMPLOYEE, NightTimeRegulation.NIGHT_SHIFT_22_6, 8);
 
-        Instant begin = instantOf(MON, 7, 0);
-        Instant end = instantOf(MON, 15, 0);
+        Instant begin = TestConstants.instantOf(TestConstants.MON, 7, 0);
+        Instant end = TestConstants.instantOf(TestConstants.MON, 15, 0);
 
         person.registerTime(begin, end);
 
-        assertPerson(person)
+        PersonAssertion.assertPerson(person)
                 .hasBaseSalary(80);
     }
 
@@ -46,12 +42,12 @@ public class EmployeeTest {
     public void nighttimeSupplementFor1Hour(){
         Person person = new Person(1, "Adam", "Employee", CooperationType.EMPLOYEE, NightTimeRegulation.NIGHT_SHIFT_22_6, 8);
 
-        Instant begin = instantOf(FRI, 15, 0);
-        Instant end = instantOf(FRI, 23, 0);
+        Instant begin = TestConstants.instantOf(TestConstants.FRI, 15, 0);
+        Instant end = TestConstants.instantOf(TestConstants.FRI, 23, 0);
 
         person.registerTime(begin, end);
 
-        assertPerson(person)
+        PersonAssertion.assertPerson(person)
                 .hasNighttimeSupplement(0);
     }
 
@@ -59,12 +55,12 @@ public class EmployeeTest {
     public void nighttimeSupplementFor2Hours(){
         Person person = new Person(1, "Adam", "Employee", CooperationType.EMPLOYEE, NightTimeRegulation.NIGHT_SHIFT_21_5, 8);
 
-        Instant begin = instantOf(SAT, 15, 0);
-        Instant end = instantOf(SAT, 23, 0);
+        Instant begin = TestConstants.instantOf(TestConstants.SAT, 15, 0);
+        Instant end = TestConstants.instantOf(TestConstants.SAT, 23, 0);
 
         person.registerTime(begin, end);
 
-        assertPerson(person)
+        PersonAssertion.assertPerson(person)
                 .hasNighttimeSupplement(2 * 2);
     }
 
@@ -72,12 +68,12 @@ public class EmployeeTest {
     public void nighttimeSupplementFor8Hours(){
         Person person = new Person(1, "Adam", "Employee", CooperationType.EMPLOYEE, NightTimeRegulation.NIGHT_SHIFT_22_6, 8);
 
-        Instant begin = instantOf(WED, 22, 0);
-        Instant end = instantOf(THU, 6, 0);
+        Instant begin = TestConstants.instantOf(TestConstants.WED, 22, 0);
+        Instant end = TestConstants.instantOf(TestConstants.THU, 6, 0);
 
         person.registerTime(begin, end);
 
-        assertPerson(person)
+        PersonAssertion.assertPerson(person)
                 .hasNighttimeSupplement(8 * 2);
     }
 
@@ -85,12 +81,12 @@ public class EmployeeTest {
     public void bonusCoinsFor1Hour(){
         Person person = new Person(1, "Adam", "Employee", CooperationType.EMPLOYEE, NightTimeRegulation.NIGHT_SHIFT_22_6, 8);
 
-        Instant begin = instantOf(FRI, 15, 0);
-        Instant end = instantOf(FRI, 16, 0);
+        Instant begin = TestConstants.instantOf(TestConstants.FRI, 15, 0);
+        Instant end = TestConstants.instantOf(TestConstants.FRI, 16, 0);
 
         person.registerTime(begin, end);
 
-        assertPerson(person)
+        PersonAssertion.assertPerson(person)
                 .hasBonusCoins(3);
     }
 
@@ -98,12 +94,12 @@ public class EmployeeTest {
     public void bonusCoinsFor2Hours(){
         Person person = new Person(1, "Adam", "Employee", CooperationType.EMPLOYEE, NightTimeRegulation.NIGHT_SHIFT_21_5, 8);
 
-        Instant begin = instantOf(SAT, 15, 0);
-        Instant end = instantOf(SAT, 17, 0);
+        Instant begin = TestConstants.instantOf(TestConstants.SAT, 15, 0);
+        Instant end = TestConstants.instantOf(TestConstants.SAT, 17, 0);
 
         person.registerTime(begin, end);
 
-        assertPerson(person)
+        PersonAssertion.assertPerson(person)
                 .hasBonusCoins(5);
     }
 
@@ -111,12 +107,12 @@ public class EmployeeTest {
     public void bonusFor8Hours(){
         Person person = new Person(1, "Adam", "Employee", CooperationType.EMPLOYEE, NightTimeRegulation.NIGHT_SHIFT_22_6, 8);
 
-        Instant begin = instantOf(WED, 22, 0);
-        Instant end = instantOf(THU, 6, 0);
+        Instant begin = TestConstants.instantOf(TestConstants.WED, 22, 0);
+        Instant end = TestConstants.instantOf(TestConstants.THU, 6, 0);
 
         person.registerTime(begin, end);
 
-        assertPerson(person)
+        PersonAssertion.assertPerson(person)
                 .hasBonusCoins(20);
     }
 }
