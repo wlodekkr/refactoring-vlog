@@ -11,8 +11,8 @@ public class PersonAssertion extends AbstractAssert<PersonAssertion, Person> {
         super(person, PersonAssertion.class);
     }
 
-    public static PersonAssertion assertPerson(Person person) {
-        return new PersonAssertion(person);
+    public static PersonAssertion assertPerson(Person workRecordsSummary) {
+        return new PersonAssertion(workRecordsSummary);
     }
 
     PersonAssertion hasAllHours(int expected) {

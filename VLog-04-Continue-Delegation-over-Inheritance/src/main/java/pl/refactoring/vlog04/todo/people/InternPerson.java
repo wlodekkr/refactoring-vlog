@@ -1,11 +1,13 @@
 package pl.refactoring.vlog04.todo.people;
 
+import pl.refactoring.vlog04.todo.Accountancy;
 import pl.refactoring.vlog04.todo.CooperationType;
 import pl.refactoring.vlog04.todo.NightTimeRegulation;
 import pl.refactoring.vlog04.todo.Person;
+import pl.refactoring.vlog04.todo.accountancy.InternAccountancy;
 
 class InternPerson extends Person {
-    InternAccountancy internAccountancy = new InternAccountancy();
+    Accountancy accountancy = new InternAccountancy();
 
     InternPerson(int id, String firstName, String lastName, CooperationType type, NightTimeRegulation nightTimeRegulation, int shiftHoursDuration) {
         super(id, firstName, lastName, type, nightTimeRegulation, shiftHoursDuration);
@@ -13,27 +15,27 @@ class InternPerson extends Person {
 
     @Override
     public int getBaseSalary(){
-        return internAccountancy.getBaseSalary(this);
+        return accountancy.getBaseSalary(this);
     }
 
     @Override
     public int getNighttimeSupplement() {
-        return internAccountancy.getNighttimeSupplement(this);
+        return accountancy.getNighttimeSupplement(this);
     }
 
     @Override
     public int getOvertimeSalary(){
-        return internAccountancy.getOvertimeSalary(this);
+        return accountancy.getOvertimeSalary(this);
     }
 
     @Override
     public int getSickLeaveSalary(){
-        return internAccountancy.getSickLeaveSalary(this);
+        return accountancy.getSickLeaveSalary(this);
     }
 
     @Override
     public int getBonusCoins(){
-        return internAccountancy.getBonusCoins(this);
+        return accountancy.getBonusCoins(this);
     }
 
 }

@@ -5,7 +5,7 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Person {
+public abstract class Person implements WorkRecordsSummary {
 
     private final int id;
     private final String firstName;
@@ -33,6 +33,7 @@ public abstract class Person {
         registry.add(record);
     }
 
+    @Override
     public int getAllHours(){
         return getAllMinutes() / 60;
     }
@@ -46,6 +47,7 @@ public abstract class Person {
         return (int) minutes;
     }
 
+    @Override
     public int getNightHours() {
         return getNightMinutes()/ 60;
     }
@@ -73,6 +75,7 @@ public abstract class Person {
 
     public abstract int getBonusCoins();
 
+    @Override
     public int getShiftHoursDuration() {
         return shiftHoursDuration;
     }
