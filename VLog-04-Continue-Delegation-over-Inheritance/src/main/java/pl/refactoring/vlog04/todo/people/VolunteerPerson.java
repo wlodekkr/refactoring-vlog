@@ -18,7 +18,7 @@ class VolunteerPerson extends Person {
 
     @Override
     public int getNighttimeSupplement() {
-        return volunteerAccountancy.getNigthtimeSupplement(this);
+        return volunteerAccountancy.getNighttimeSupplement(this);
     }
 
     @Override

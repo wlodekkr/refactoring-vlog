@@ -5,7 +5,7 @@ public class VolunteerAccountancy {
         return 0;
     }
 
-    int getNigthtimeSupplement(VolunteerPerson volunteerPerson) {
+    int getNighttimeSupplement(VolunteerPerson volunteerPerson) {
         int nightHours = volunteerPerson.getNightHours();
 
         if (nightHours < volunteerPerson.getShiftHoursDuration() / 4.0)

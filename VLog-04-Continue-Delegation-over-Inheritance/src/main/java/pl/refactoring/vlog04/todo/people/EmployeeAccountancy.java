@@ -18,11 +18,11 @@ public class EmployeeAccountancy {
         return 0;
     }
 
-    int extractedGetSickLeaveSalary(EmployeePerson employeePerson) {
+    int getSickLeaveSalary(EmployeePerson employeePerson) {
         return 0;
     }
 
     int getBonusCoins(EmployeePerson employeePerson) {
-        return (int) Math.round(0.25 * employeePerson.getBaseSalary());
+        return (int) Math.round(0.25 * getBaseSalary(employeePerson));
     }
 }

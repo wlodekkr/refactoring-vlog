@@ -5,7 +5,7 @@ public class InternAccountancy {
         return 5 * internPerson.getAllHours();
     }
 
-    int getNightimeSupplement(InternPerson internPerson) {
+    int getNighttimeSupplement(InternPerson internPerson) {
         int nightHours = internPerson.getNightHours();
 
         if (nightHours < internPerson.getShiftHoursDuration() / 4.0)

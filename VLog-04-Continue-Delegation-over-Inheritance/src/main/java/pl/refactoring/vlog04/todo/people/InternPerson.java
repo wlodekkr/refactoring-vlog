@@ -18,7 +18,7 @@ class InternPerson extends Person {
 
     @Override
     public int getNighttimeSupplement() {
-        return internAccountancy.getNightimeSupplement(this);
+        return internAccountancy.getNighttimeSupplement(this);
     }
 
     @Override

@@ -28,7 +28,7 @@ class EmployeePerson extends Person {
 
     @Override
     public int getSickLeaveSalary(){
-        return employeeAccountancy.extractedGetSickLeaveSalary(this);
+        return employeeAccountancy.getSickLeaveSalary(this);
     }
 
     @Override
