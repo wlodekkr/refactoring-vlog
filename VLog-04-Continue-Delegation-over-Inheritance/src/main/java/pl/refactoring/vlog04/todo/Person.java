@@ -14,7 +14,7 @@ public abstract class Person {
     protected final CooperationType type;
     protected final NightTimeRegulation nightTimeRegulation;
 
-    protected final int shiftHoursDuration;
+    private final int shiftHoursDuration;
 
     protected List<WorkRecord> registry = new ArrayList<>();
 
@@ -72,4 +72,8 @@ public abstract class Person {
     public abstract int getSickLeaveSalary();
 
     public abstract int getBonusCoins();
+
+    public int getShiftHoursDuration() {
+        return shiftHoursDuration;
+    }
 }

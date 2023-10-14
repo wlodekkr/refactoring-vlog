@@ -5,37 +5,35 @@ import pl.refactoring.vlog04.todo.NightTimeRegulation;
 import pl.refactoring.vlog04.todo.Person;
 
 class EmployeePerson extends Person {
+    EmployeeAccountancy employeeAccountancy = new EmployeeAccountancy();
+
     EmployeePerson(int id, String firstName, String lastName, CooperationType type, NightTimeRegulation nightTimeRegulation, int shiftHoursDuration) {
         super(id, firstName, lastName, type, nightTimeRegulation, shiftHoursDuration);
     }
 
     @Override
     public int getBaseSalary(){
-        return 10 * getAllHours();
+        return employeeAccountancy.getBaseSalary(this);
     }
 
     @Override
     public int getNighttimeSupplement() {
-        int nightHours = getNightHours();
-
-        if (nightHours < shiftHoursDuration / 4.0)
-            return 0;
-
-        return 2 * nightHours;
+        return employeeAccountancy.getNighttimeSupplement(this);
     }
 
     @Override
     public int getOvertimeSalary(){
-        return 0;
+        return employeeAccountancy.getOvertimeSalary(this);
     }
 
     @Override
     public int getSickLeaveSalary(){
-        return 0;
+        return employeeAccountancy.extractedGetSickLeaveSalary(this);
     }
 
     @Override
     public int getBonusCoins(){
-        return (int) Math.round(0.25 * getBaseSalary());
+        return employeeAccountancy.getBonusCoins(this);
     }
+
 }
