@@ -22,6 +22,7 @@
         <module>VLog-02-Begin-Clean-Tests</module>
         <module>VLog-02-End-Clean-Tests</module>
         <module>VLog-03-Begin-Conditionals-vs-Polymorphism</module>
+        <module>VLog-04-Continue-Delegation-over-Inheritance</module>
     </modules>
 
     <dependencies>
