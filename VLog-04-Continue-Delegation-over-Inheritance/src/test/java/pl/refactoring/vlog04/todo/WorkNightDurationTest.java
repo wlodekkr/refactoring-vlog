@@ -2,7 +2,6 @@ package pl.refactoring.vlog04.todo;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
-import pl.refactoring.vlog04.todo.people.PersonFactory;
 
 import java.time.Instant;
 

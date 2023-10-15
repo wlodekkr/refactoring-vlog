@@ -1,7 +1,6 @@
 package pl.refactoring.vlog04.todo;
 
 import org.junit.jupiter.api.Test;
-import pl.refactoring.vlog04.todo.people.PersonFactory;
 
 import java.time.Instant;
 

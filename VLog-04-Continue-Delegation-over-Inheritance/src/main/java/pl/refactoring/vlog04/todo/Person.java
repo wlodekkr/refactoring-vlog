@@ -5,7 +5,7 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Person implements WorkRecordsSummary {
+public class Person implements WorkRecordsSummary {
 
     private final int id;
     private final String firstName;
@@ -17,14 +17,16 @@ public abstract class Person implements WorkRecordsSummary {
     private final int shiftHoursDuration;
 
     protected List<WorkRecord> registry = new ArrayList<>();
+    Accountancy accountancy;
 
-    public Person(int id, String firstName, String lastName, CooperationType type, NightTimeRegulation nightTimeRegulation, int shiftHoursDuration) {
+    public Person(int id, String firstName, String lastName, CooperationType type, NightTimeRegulation nightTimeRegulation, int shiftHoursDuration, Accountancy accountancy1) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.type = type;
         this.nightTimeRegulation = nightTimeRegulation;
         this.shiftHoursDuration = shiftHoursDuration;
+        accountancy = accountancy1;
     }
 
     public void registerTime(Instant begin, Instant end){
@@ -65,15 +67,25 @@ public abstract class Person implements WorkRecordsSummary {
         return 0;
     }
 
-    public abstract int getBaseSalary();
+    public int getBaseSalary(){
+        return accountancy.getBaseSalary(this);
+    }
 
-    public abstract int getNighttimeSupplement();
+    public int getNighttimeSupplement() {
+        return accountancy.getNighttimeSupplement(this);
+    }
 
-    public abstract int getOvertimeSalary();
+    public int getOvertimeSalary(){
+        return accountancy.getOvertimeSalary(this);
+    }
 
-    public abstract int getSickLeaveSalary();
+    public int getSickLeaveSalary(){
+        return accountancy.getSickLeaveSalary(this);
+    }
 
-    public abstract int getBonusCoins();
+    public int getBonusCoins(){
+        return accountancy.getBonusCoins(this);
+    }
 
     @Override
     public int getShiftHoursDuration() {
